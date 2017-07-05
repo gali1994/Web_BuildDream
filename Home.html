@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DreamBuild</title>
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+<body>	
+	<header class="clear">
+		<a class="logo" href="#"><img src="img/home/logo.jpg"/></a>
+		<div class="nav_small">Home<img class="more" src="img/home/more.png" alt=""/></div>
+		<div class="nav_small_content">
+			<img src="img/home/close.png" />
+			<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="#">Design</a></li>
+				<li><a href="#">Photo</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+
+			</ul>
+		</div>
+		<nav class="nav_con">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Design</a></li>
+			<li><a href="#">Photo</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Contact</a></li>
+		</nav>
+	</header>
+	<div class="main">
+		<div class="main_top clear">		
+			<div class="loop_wrap">
+				<ul class="loop_wrap_content">
+					<li><img src="img/home/ps1.jpg" alt=""/></li>
+					<li><img src="img/home/ps2.jpg" alt=""/></li>
+					<li><img src="img/home/ps3.jpg" alt=""/></li>
+					<li><img src="img/home/ps4.jpg" alt=""/></li>
+					<li><img src="img/home/ps5.jpg" alt=""/></li>
+				</ul>				
+			</div>
+			<div class="main_title">
+				<h2><span>W</span>el<span>c</span>ome!</h2>
+				<p><span>Click</span> here for more info about DreamBuild.When the dream, awake in the brilliant spring, Who in the orchid world of bloom solidification that miss? The flowers still have far to go, just pace. Passion can't intertwined in the embrace of spring, A memory of the cold, Who is my pride. When the breeze, your breath is still. You still never withered bloom in my world, You are the angel of yesterday. You are today's fairy. Tube he go back to the spring and winter...</p>
+			</div>
+		</div>
+		<div class="content ">
+		<div class="content_container clear">
+			<li>
+				<h1>Humanity</h1>
+				<img src="img/home/img1.jpg" alt="">
+				<h2>Golden palace golden fall</h2>
+				<p>The country woman lookback golden land, show the desire and joy of harvest.</p>
+				<button>Read More</button>
+			</li>
+			<li>
+				<h1>Nature</h1>
+				<img src="img/home/img2.jpg" alt="">
+				<h2>Not the autumn Tachuan</h2>
+				<p>Sure enough, there was no autumn! But can enjoy the sunrise view!</p>
+				<button>Read More</button>
+			</li>
+			<li>
+				<h1>Love</h1>
+				<img src="img/home/img3.jpg" alt="">
+				<h2>Precious moments cannot be copied</h2>
+				<p>The unique gentle visual shooting cleverly documentary and art together.</p>
+				<button>Read More</button>
+			</li>
+			<li>
+				<h1>Animal</h1>
+				<img src="img/home/img4.jpg" alt="">
+				<h2>The great migration in spring</h2>
+				<p>The Kazakh national Millennium unchanged spring transition of the year.
+Read More</p>
+				<button>Read More</button>
+			</li>
+			</div>
+		</div>
+		<div class="aboutus">
+			<div class="left">
+				<h2>Shortly about us</h2>
+				<img src="img/home/midimg1.jpg" alt=""/>
+				<div class="aboutus_content">
+					<p>Ah! Photography people, This is my song for you, A song of praise!
+Dashan know your great mind, Understand your watery Roubo river. My photography, I am happy! Photography people, Take your vigorous pace, In the light and shadow of</p>
+				</div>
+.
+				<div class="direction">
+					<li><i></i><a href="">Delicacy</a></li>
+					<li><i></i><a href="">Delicacy</a></li>
+					<li><i></i><a href="">Overseas</a></li>
+					<li><i></i><a href="">Overseas</a></li>
+					<li><i></i><a href="">Conception</a></li>
+					<li><i></i><a href="">Animal</a></li>
+					<li><i></i><a href="">Humanity</a></li>
+					<li><i></i><a href="">Botany</a></li>
+
+				</div>
+			</div>
+			<div class="right">
+				<h2>Latest photoshoots</h2>
+				<div class="photoshoots">
+					<img src="img/home/lp1.jpg" alt="">
+					<img src="img/home/lp2.jpg" alt="">
+					<img src="img/home/lp3.jpg" alt="">
+					<img src="img/home/lp4.jpg" alt="">
+					<img src="img/home/lp5.jpg" alt="">
+					<img src="img/home/lp6.jpg" alt="">
+					<img src="img/home/lp7.jpg" alt="">
+					<img src="img/home/lp8.jpg" alt="">
+					<img src="img/home/lp9.jpg" alt="">
+					<img src="img/home/lp10.jpg" alt="">
+					<img src="img/home/lp11.jpg" alt="">
+					<img src="img/home/lp12.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>Copyright @2014 All rights reserved <span>树莓前端</span><i></i></footer>
+	
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>		
+		<script>
+		//图片滑动
+		(function (){
+			var oUl = $('.loop_wrap_content');
+			var aLi = oUl.find('li');
+			var iNow = 0;
+			var timer = null;
+			fnFade();
+
+			function autoPlay(){
+				timer=setInterval(function (){
+					iNow++;
+					iNow%=aLi.length;
+					
+					fnFade();
+				},3000)
+			}
+			autoPlay();
+			function fnFade(){
+				aLi.each(function (i){
+				if(i!=iNow){
+					aLi.eq(i).fadeOut().css('zIndex',1);					
+				}else{
+					aLi.eq(i).fadeIn().css('zIndex',2);
+					
+				}
+			});
+			}
+			//small导航
+			$('.more').click(function (){
+				$('.nav_small_content').show();
+				// $(this).hide();
+			})
+			$('.nav_small_content').find('img').click(function(){
+				$('.nav_small_content').hide();
+				$('.more').show();
+			})
+
+		})();
+
+		
+	</script>
+	</body>
+</html>
